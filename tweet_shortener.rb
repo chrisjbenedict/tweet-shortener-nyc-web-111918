@@ -2,7 +2,7 @@
 def dictionary
   dictionary = {
   'hello' => 'hi',
-  'to' => '2',
+  "to" => "2",
   'two' => '2',
   'too' => '2',
   'for' => '4',
@@ -18,7 +18,7 @@ def word_substituter(tweet)
   tweet_arr = tweet.split(' ')
   tweet_arr.collect do |word|
     if dictionary.keys.include?(word.downcase)
-      word == dictionary[word.downcase]
+      word = dictionary[word.downcase]
     else
       word
     end
