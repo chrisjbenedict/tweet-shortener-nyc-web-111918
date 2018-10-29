@@ -12,7 +12,7 @@ dictionary = {
   'and' => '&'
 }
 
-def word_subtituter(tweet)
+def word_substituter(tweet)
   tweet_arr = tweet.split(' ')
   for i in tweet_arr
     if dictionary.includes?(tweet_arr[i])
