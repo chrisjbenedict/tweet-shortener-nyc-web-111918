@@ -14,9 +14,11 @@ dictionary = {
 
 def word_substituter(tweet)
   tweet_arr = tweet.split(' ')
-  for i in tweet_arr
-    if dictionary.includes?(tweet_arr[i])
-      tweet_arr[i] = dictionary.value
+  tweet_arr.collect do |word|
+    if dictionary.keys.include?(word.downcase)
+      word = dictionary[word]
+    else
+      word
     end
   end
   tweet_arr.join(' ')
