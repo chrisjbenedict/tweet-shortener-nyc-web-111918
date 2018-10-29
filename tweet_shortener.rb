@@ -15,12 +15,13 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  tweet.split.collect do |word|
+  tweet_arr = tweet.split(' ')
+  tweet_arr.collect do |word|
     if dictionary.keys.include?(word.downcase)
       word = dictionary[word.downcase]
     else
       word
     end
   end
-  puts tweet.join(' ')
+  tweet_arr.join(' ')
 end
